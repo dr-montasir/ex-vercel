@@ -1,7 +1,7 @@
 {
   "name": "ex-vercel",
   "version": "1.0.0",
-  "description": "",
+  "description": "deploy express.js app to vercel",
   "main": "server.js",
   "engines": {
     "node": "16.x"
@@ -10,9 +10,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon -r esm server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "deploy",
+    "express.js",
+    "vercel",
+    "deploy express.js app to vercel"
+  ],
   "author": "Dr. Montasir",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.1",
     "esm": "^3.2.25",

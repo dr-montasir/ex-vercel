@@ -2,13 +2,13 @@
   "name": "ex-vercel",
   "version": "1.0.0",
   "description": "deploy express.js app to vercel",
-  "main": "server.js",
+  "main": "app.js",
   "engines": {
     "node": "16.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r esm server.js"
+    "start": "nodemon -r esm app.js"
   },
   "keywords": [
     "deploy",
@@ -19,9 +19,12 @@
   "author": "Dr. Montasir",
   "license": "MIT",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.1",
     "esm": "^3.2.25",
     "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
     "native_math": "^2.0.0",
     "nodemon": "^2.0.19"
   }

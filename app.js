@@ -1,23 +1,21 @@
 import express from 'express';
-import dotenv from 'dotenv';
-import nm from 'native_math';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+const logger = require('morgan');
 
-dotenv.config();
+import indexRouter from './routes/index';
+import usersRouter from './routes/users';
 
 const app = express();
 
+app.use(logger('dev'));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  let angle = nm.rib(0, 360);
-
-  res.json({
-    message: 'hello',
-    key: process.env.KEY,
-    angle,
-    sin_angle: nm.sin.deg(angle),
-  });
-});
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
 const port = process.env.PORT || 1400;
 

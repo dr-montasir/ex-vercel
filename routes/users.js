@@ -1,4 +1,5 @@
 import express from 'express';
+
 const router = express.Router();
 
 /* GET users listing. */
@@ -15,4 +16,5 @@ router.get('/', (req, res) => {
   });
 });
 
-export default router;
+// export default router;
+module.exports = router;

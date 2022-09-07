@@ -2,13 +2,13 @@
   "name": "ex-vercel",
   "version": "1.0.0",
   "description": "deploy express.js app to vercel",
-  "main": "app.js",
+  "main": "server.js",
   "engines": {
     "node": "16.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r esm app.js"
+    "start": "nodemon -r esm server.js"
   },
   "keywords": [
     "deploy",
